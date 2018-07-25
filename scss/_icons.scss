@@ -1,0 +1,90 @@
+.icon {
+  @include smooth;
+
+  fill: $dark-blue;
+  width: .9375em;
+  height: .9375em;
+  overflow: hidden;
+  vertical-align: -.12em;
+  backface-visibility: hidden;
+
+
+  &.after{
+    margin-left: .666666667em;
+  }
+
+  &.before{
+    margin-right: .666666667em;
+  }
+
+  &.inline{
+    width: .666666667em;
+    height: .666666667em;
+    vertical-align: baseline;
+  }
+
+  a:hover &{
+    fill: $grey;
+  }
+
+
+  &.responsive{
+    width: 100%;
+    height: auto;
+  }
+
+  &.warning{
+    fill: $yellow;
+  }
+
+  .reverse &{
+    fill: white;
+  }
+
+}
+
+
+
+  a:hover .warning{
+    fill: $yellow;
+  }
+
+
+
+.bg-icon{
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding-left: 2em;
+  line-height: 1.2em;
+
+  &:before{
+      content: '';
+      width: 1.5em;
+      height: 2em;
+      display: inline-block;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -1em;
+      background-size: contain;
+  }
+
+}
+
+a{
+  .invert-hover{
+    @include smooth;
+    fill: $dark-blue;
+    color: transparent;
+  }
+
+  /*&:hover{
+    .invert-hover{
+      fill: white;
+      color: $dark-blue;
+    }
+  }*/
+}

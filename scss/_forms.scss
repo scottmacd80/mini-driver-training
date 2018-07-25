@@ -1,0 +1,47 @@
+
+/*input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+    -webkit-box-shadow: 0 0 0 40px white inset;
+}*/
+
+input{
+    @extend %serif;
+    @include smooth;
+    //-webkit-box-shadow: 0 0 0 40px white inset;
+    font-size: 1.333333333em;
+    border: none;
+    border-bottom: 1px solid $line-grey;
+    padding: .666666667em 0 .625em;
+    background: transparent;
+
+    &:focus{
+        outline: none;
+        border-color: $dark-blue;
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $grey;
+}
+
+.field-validation-error{
+  padding-top: .5em;
+  color: red;
+  display: block;
+  font-size: .777777778em;
+  text-align: left;
+}
+
+.umbraco-forms-submitmessage{
+  font-size: 2em;
+}

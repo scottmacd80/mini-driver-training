@@ -1,0 +1,115 @@
+.site-header{
+    background: white;
+    position: fixed;
+    width: 100%;
+    padding: 1.5em 0;
+    z-index: 999999;
+    border-bottom: 1px solid $line-grey;
+    //box-shadow: 0px 1px 0px white;
+
+    @include breakpoint(below-desktop) {
+        //position: relative;
+    }
+
+
+  .inner{
+    table-layout: auto;
+    width: 90.625%;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+
+    .icon{
+        height: 22px;
+        width: 22px
+    }
+}
+
+
+@keyframes logo-reduce {
+  0%   { opacity: 1;  height: 97px; }
+  50%  { opacity: 0;  height: 97px; }
+  100% { opacity:0;  height: 0; }
+}
+
+@keyframes logo-enlarge {
+  0%   { opacity: 0;  height: 0; }
+  50%  { opacity: 0;  height: 98px; }
+  100% { opacity:1;  height: 98px; }
+}
+
+
+
+body:not(.initial-load):not(.scrolled){
+
+
+    .logo{
+        &:before{
+            animation: logo-enlarge .5s 1 forwards;
+        }
+    }
+
+}
+
+
+.logo{
+    width: 114px;
+    vertical-align: middle;
+
+        &:before{
+            content: '';
+            width: 100%;
+            height: 98px;
+            background: url(../img/logo-staghead.png) no-repeat 0 0;
+            background-size: 100%;
+            display: block;
+
+
+            @include breakpoint(short-and-wide) {
+                display: none;
+            }
+
+
+            @include breakpoint(below-desktop) {
+                display: none;
+            }
+
+
+
+
+
+            .scrolled &{
+                animation: logo-reduce .5s 1 forwards;
+            }
+
+        }
+
+
+    span{
+        position: relative;
+        white-space:nowrap;
+        width: 100%;
+        height: 22px;
+        background-image: url(../img/logo-reduced.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 100%;
+        text-indent: -9999px;
+        display: block;
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+

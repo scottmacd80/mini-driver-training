@@ -1,0 +1,464 @@
+
+
+.hero{
+
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+
+    @include breakpoint(short-and-wide) {
+        height: 100vh;
+    }
+
+
+    @include breakpoint(below-tablet) {
+        height: auto;
+        display: block;
+    }
+
+    .Home &{
+        @include breakpoint(below-tablet) {
+            margin-bottom: 1.666666667em;
+        }
+
+    }
+
+
+    &.gradient{
+
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
+            background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+
+            @include breakpoint(below-tablet) {
+                background: rgba(0,0,0,.6);
+            }
+
+
+
+
+        }
+
+
+    }
+
+
+    .inner{
+        width: 87.5%;
+        max-width: 1366px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 999;
+        padding: 100px 0;
+
+        @include breakpoint(below-tablet) {
+            text-align: center;
+        }
+
+
+        > *{
+           max-width: 680px;
+        }
+
+        img{
+            display: inline-block;
+            margin-bottom: 1.666666667em;
+        }
+
+        a:not(.btn){
+            color: $grey;
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+
+            &:after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                display: block;
+                background: rgba(255,255,255,.3);
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+
+            &:before{
+                @include smooth;
+                content: '';
+                width: 0;
+                height: 2px;
+                display: block;
+                background: white;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                z-index: 99;
+            }
+
+
+            &:hover{
+                color: white;
+
+                &:before{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    &.alt{
+        justify-content: flex-end;
+        //background-size: contain;
+        min-height: 440px;
+        display: flex;
+
+        @include breakpoint(wide-desktop) {
+            //background-size: 50%;
+            background-size: cover;
+            background-position: left center;
+        }
+
+
+        @include breakpoint(below-desktop) {
+            background-position: -22vh 0;
+        }
+
+        @include breakpoint(below-tablet) {
+            //background-position: center;
+            background-size: cover;
+            margin-bottom: 3.333333333em;
+        }
+
+        &:after{
+            @include breakpoint(below-tablet) {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            }
+
+        }
+
+
+        .carousel-copy{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .inner{
+            width: 60%;
+            margin: 0;
+            text-align: center;
+            padding: 0 4%;
+
+
+
+
+            @include breakpoint(below-tablet) {
+                width: 87.5%;
+                margin: 0 auto;
+                padding-right: 0;
+                display: flex;
+                align-items: flex-end;
+                min-height: 440px;
+            }
+
+
+
+
+            h2{
+                //font-size: 6.777777778vmin;
+                font-size: 2.666666667em;
+                line-height: 1.125em;
+                color: white;
+                margin-bottom: .625em;
+                max-width: 100%;
+
+
+
+
+                @include breakpoint(below-tablet) {
+                    font-size: 1.666666667em;
+                    line-height: 1.111111111em;
+                    margin-bottom: 0;
+                    padding-bottom: 2.666666667em;
+                }
+
+            }
+
+            .btn{
+                @include breakpoint(below-tablet) {
+                    position: absolute;
+                    bottom: -40px;
+                    left: 0;
+                    width: 100%;
+
+                }
+
+                @include breakpoint(mobile) {
+                    padding-left: 3em;
+                    padding-right: 3em;
+                }
+
+
+            }
+        }
+
+        .scroll{
+            @include breakpoint(below-tablet) {
+                display: none;
+            }
+
+        }
+
+    }
+
+
+    .story-tag{
+        font-size: 1.333333333em;
+        margin-bottom: .416666667em;
+        display: block;
+
+        @include breakpoint(below-tablet) {
+            font-size: 1em;
+            line-height: 1.333333333em;
+        }
+
+    }
+
+    p{
+        font-size: 1.333333333em;
+        line-height: 1.25em;
+
+
+        @include breakpoint(below-tablet) {
+            font-size: 1em;
+            line-height: 1.333333333em;
+        }
+
+
+    }
+
+
+    h1{
+        font-size: 1.111111111em;
+        color: white;
+    }
+
+    h2{
+        font-size: 3.888888889em;
+        margin-bottom: .5em;
+
+        @include breakpoint(below-tablet) {
+            font-size: 2em;
+        }
+
+    }
+
+
+
+}
+
+
+.hero-carousel{
+    background: black;
+
+    @include breakpoint(below-tablet) {
+        background: transparent;
+    }
+
+}
+
+.banner{
+    text-align: center;
+    background-color: $light-grey;
+
+    .CampaignDetail &,
+    .Results &{
+        background-color: transparent;
+    }
+
+    .inner-container{
+        padding: 2.222222222em 0 1.444444444em;
+
+        .CampaignDetail &{
+            padding-top: 4.444444444em;
+            padding-bottom: 4.444444444em;
+
+            @include breakpoint(tablet) {
+                padding-top: 3.333333333em;
+                padding-bottom: 3.333333333em;
+            }
+
+        }
+    }
+
+    h1{
+
+        font-size: 1.111111111em;
+
+        @include breakpoint(below-tablet) {
+            font-size: .8em;
+        }
+
+        .Campaign &{
+            font-size: 3.888888889em;
+            line-height: 1.114285714em;
+            margin-bottom: .142857143em;
+
+            @include breakpoint(tablet) {
+                font-size: 2em;
+                line-height: 1.166666667em;
+            }
+        }
+
+
+
+
+    }
+
+    h1 + h2{
+        font-size: 3.888888889em;
+        line-height: 1.114285714em;
+        padding: 0;
+
+        @include breakpoint(below-tablet) {
+            font-size: 2em;
+        }
+    }
+
+    h2{
+        font-size: 3em;
+        line-height: 1.066666667em;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+
+        @include breakpoint(below-tablet) {
+            font-size: 2em;
+            line-height: 1.111111111em;
+            padding-top: .555555556em;
+            padding-bottom: .555555556em
+        }
+
+        .CampaignDetail &{
+            margin-bottom: .285714286em;
+        }
+
+    }
+
+    p{
+        font-size: 1.333333333em;
+        line-height: 1.25em;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .img-container{
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+
+        @include breakpoint(mobile) {
+            height: 200px;
+        }
+
+    }
+
+    .caption{
+        @extend %serif;
+        font-size: 2em;
+        line-height: 1.222222222em;
+        background: white;
+        padding: 1.666666667em 0;
+
+        @include breakpoint(below-tablet) {
+            font-size: 1.333333333em;
+            line-height: 1.333333333em;
+        }
+
+
+        > *{
+            width: 87.5%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+    }
+}
+
+.scroll{
+
+    text-decoration: none;
+    font-size: .875em;
+    display: block;
+
+
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+
+
+
+    .hero &{
+        color: white;
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+
+        @include breakpoint(below-tablet) {
+            position: relative;
+            display: inline-block;
+            bottom: auto;
+            margin-bottom: 30px;
+        }
+
+    }
+
+
+
+
+
+
+
+    .icon{
+        display: block;
+        width: 22px;
+        height: 14px;
+        fill: $dark-blue;
+        margin: 10px auto 0;
+
+        .hero &{
+            fill: white;
+        }
+    }
+}

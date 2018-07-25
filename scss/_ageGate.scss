@@ -1,0 +1,283 @@
+/* BASE STYLES */
+
+#ageOuterModal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 999999;
+
+    &:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+#ageInnerModal{
+
+    width: 90%;
+    max-width: 688px;
+    padding: 30px 30px 60px 30px;
+    //box-shadow: 0px 3px 8px rgba(0,0,0,.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+
+
+
+
+
+}
+
+
+
+/* CUSTOMISATION */
+
+
+
+#ageOuterModal{
+
+
+    &:after{
+        background: rgba(255,255,255,.95);
+    }
+}
+
+
+
+#ageInnerModal{
+    background: $dark-blue;
+    color: white;
+
+    font-weight: 300;
+
+    img{
+        display: inline-block;
+        margin-bottom: 2em;
+        width: 148px;
+        height: 155px;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1em;
+            width: 110px;
+            height: 115px;
+        }
+
+    }
+
+    h1{
+          font-size: 2.222222222em;
+          margin-bottom: .25em;
+
+      @include breakpoint(mobile) {
+          font-size: 1.666666667em;
+          margin-bottom: .333333333em;
+      }
+    }
+
+    button{
+        font-size: 1.125em;
+        padding-left: 1em;
+        padding-right: 1em;
+        display: inline-block!important;
+
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+
+        @include breakpoint(tablet) {
+            width: 87.5%;
+        }
+
+    }
+
+    label{
+      display: none;
+    }
+
+}
+
+#ageGateMessage{
+  font-size: 1em;
+  line-height: 1.333333333em;
+  margin-bottom: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(mobile) {
+    font-size: .777777778em;
+    line-height: 1.428571429em;
+  }
+
+
+}
+
+#ageSubTitle{
+    margin-bottom: 0;
+    font-size: 1em;
+    line-height: 1.333333333em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+
+    @include breakpoint(mobile) {
+      font-size: .777777778em;
+      line-height: 1.428571429em;
+      margin-bottom: 0;
+    }
+
+}
+
+
+/* form elememt styles */
+
+
+#ageSelectContainer{
+    //display: inline-block;
+    //width: 30%;
+    padding: 0 100px;
+    vertical-align: top;
+    text-align: left;
+    margin-bottom: 1.333333333em;
+
+    @include breakpoint(tablet) {
+        width: 100%;
+        padding: 0;
+    }
+
+
+
+
+
+    input{
+      @extend %serif;
+        width: 100%;
+        height: 48px;
+        border: 0;
+        background: white;
+        padding: 16px;
+    }
+}
+
+
+#countrySelectContainer{
+    text-align: left;
+  //width: 70%;
+  //display: inline-block;
+  padding: 0 100px;
+  margin-bottom: .875em;
+
+  @include breakpoint(tablet) {
+      width: 100%;
+
+      padding: 0;
+  }
+
+}
+
+#countrySelectContainerInner,
+#ageSelectContainerInner{
+
+
+  vertical-align: top;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-bottom: 1px solid $line-grey;
+
+  // Custom Styling
+  text-shadow: none;
+
+
+
+  @extend %icon;
+  @extend .icon--down;
+
+  &:before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  select{
+    @extend %serif;
+    font-size: 1.333333333em;
+    line-height: 1.2em;
+    border-radius: 0;
+    cursor: pointer;
+    background: $dark-blue;
+    color: white;
+    padding: 16px 0;
+    width: 108%;
+    border: none;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+    // Mozilla Hack
+    text-indent: 0.01px;
+    text-overflow: '';
+
+    // IE 6-8 Hack
+    width: 160%\9;
+
+    @include breakpoint(mobile) {
+        font-size: 1em;
+    }
+
+
+    &:focus{
+      outline:none;
+    }
+  }
+}
+
+%icon:before {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  height: 100%;
+  color:white;
+  width: 50px;
+
+}
+.icon--down:before {
+    content: '';
+    background: url(../img/icon-box-arrow-down-inverted.svg) no-repeat center;
+}
+
+
+#privacyLink,
+#termsLink{
+  color: white;
+  font-size: .8125em;
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+
+  &:hover{
+    opacity: .4;
+  }
+}
+

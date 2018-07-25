@@ -1,0 +1,262 @@
+.three-col-list{
+
+    @include breakpoint(above-tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    > *{
+        @include breakpoint(above-tablet) {
+            width: 30.453879933%;
+            margin-left: 4.3191801%;
+        }
+
+
+        &:nth-child(3n+1){
+            margin-left: 0;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    img{
+        margin-bottom: 1.25em;
+    }
+
+    h2{
+        font-size: 1.666666667em;
+        line-height: 1.2em;
+        margin-bottom: .733333333em;
+    }
+
+    a{
+        display: block;
+
+        p{
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+
+            &:after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                display: block;
+                background: $dark-blue;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+
+            &:before{
+                @include smooth;
+                content: '';
+                width: 0;
+                height: 2px;
+                display: block;
+                background: $line-grey;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                z-index: 99;
+            }
+        }
+
+        &:hover{
+            p:before{
+                width: 100%;
+            }
+        }
+
+
+    }
+
+
+
+
+
+    &.grid{
+        > *{
+
+                width: 32.7964861%;
+                margin-left: .8052709%;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                @include breakpoint(below-tablet) {
+                    width: 100%;
+                    height: auto;
+                    margin-left: 0;
+                    margin-bottom: 1px;
+                }
+
+
+                &:before{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0,0,0,.5);
+                    z-index: 1;
+                }
+
+                > .inner{
+                    position: relative;
+                    z-index: 9;
+
+                    @include breakpoint(below-tablet) {
+                        padding-top: 1.5em;
+                        padding-bottom: 1.5em;
+                    }
+
+                }
+
+
+
+
+
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+        }
+
+        a{
+            color: white;
+            overflow: hidden;
+
+            &:hover{
+                .img-container{
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .img-container{
+            @include smooth;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+    }
+
+
+}
+
+.shelf{
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 350px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: -1;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f4f5+0,fafafb+100&1+0,0+30,0+30 */
+    background-image: -moz-linear-gradient(top, rgba(243,244,245,1) 0%, rgba(245,246,247,0) 40px, rgba(250,250,251,0) 100%); /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(top, rgba(243,244,245,1) 0%,rgba(245,246,247,0) 40px,rgba(250,250,251,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to bottom, rgba(243,244,245,1) 0%,rgba(245,246,247,0) 40px,rgba(250,250,251,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+
+
+    }
+
+
+}
+
+
+
+.products{
+
+    h1{
+        width: 87.5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .three-col-list{
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        > *{
+            margin-bottom: 5.555555556em;
+
+            @include breakpoint(tablet) {
+                margin-bottom: 1.666666667em;
+            }
+
+        }
+    }
+}
+
+
+
+.news-items{
+
+    width: 87.5%;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+
+
+    li{
+        margin-bottom: 2.5em;
+
+        @include breakpoint(tablet) {
+            margin-bottom: .833333333em;
+        }
+
+    }
+
+    a{
+        > *:not(picture){
+
+            @include breakpoint(tablet) {
+                margin-left: 6.25%;
+                margin-right: 6.25%;
+            }
+
+
+        }
+    }
+}
+
+
+
+.mobile-slider{
+    .slick-prev{
+        left: 6.25%;
+    }
+
+    .slick-next{
+        right: 6.25%;
+    }
+}

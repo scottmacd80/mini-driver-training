@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.thedalmore.dalmore"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>The Dalmore</name>
+
+
+  <preference name="AllowInlineMediaPlayback" value="true"/>
+
+<preference name="phonegap-version" value="cli-7.1.0" />
+
+
+<splash src="Default@2x~universal~anyany.png" />
+
+<plugin name="cordova-plugin-splashscreen" />
+
+<preference name="fullscreen" value="true" />
+
+
+<icon platform="ios" src="icon-83.5@2x.png" width="167" height="167"/>
+
+
+
+
+
+
+
+
+
+
+        <preference name="orientation" value="default" />
+
+
+
+        <preference name="target-device" value="universal" />
+        <preference name="webviewbounce" value="true" />
+        <preference name="prerendered-icon" value="true" />
+        <preference name="stay-in-webview" value="true" />
+        <preference name="ios-statusbarstyle" value="lightcontent" />
+        <preference name="android-windowSoftInputMode" value="adjustPan" />
+        <preference name="ShowSplashScreenSpinner" value="false" />
+        <preference name="detect-data-types" value="true" />
+        <preference name="exit-on-suspend" value="false" />
+        <preference name="show-splash-screen-spinner" value="false" />
+        <preference name="auto-hide-splash-screen" value="false" />
+        <preference name="SplashScreenDelay" value="5000" />
+        <preference name="EnableViewportScale" value="true" />
+        <preference name="TopActivityIndicator" value="gray" />
+        <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+        <preference name="HideKeyboardFormAccessoryBar" value="true" />
+        <preference name="SuppressesIncrementalRendering" value="true" />
+        <preference name="android-minSdkVersion" value="18" />
+        <preference name="android-installLocation" value="internalOnly" />
+        <preference name="ErrorUrl" value="" />
+        <preference name="BackgroundColor" value="0x000000" />
+        <preference name="KeepRunning" value="true" />
+        <preference name="DisallowOverscroll" value="true" />
+        <preference name="LoadingDialog" value="" />
+        <preference name="LoadUrlTimeoutValue" value="20000" />
+        <preference name="disable-cursor" value="true" />
+
+        <content src="index.html" />
+        <gap:platform name="ios" />
+        <gap:platform name="android" />
+
+
+
+
+
+</widget>

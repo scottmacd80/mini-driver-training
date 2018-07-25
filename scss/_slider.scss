@@ -1,0 +1,164 @@
+
+
+.slider-container{
+    padding: 2.222222222em 0 3em;
+    overflow: hidden;
+
+    .inner-container{
+        max-width: 1000px;
+    }
+
+
+    .scroll{
+        margin-top: 3.571428571em;
+    }
+
+}
+
+
+
+.slider{
+
+
+    .slick-list{
+        overflow: visible;
+    }
+}
+
+
+.slider-ui{
+
+
+    .slick-slide{
+        @include smooth;
+        opacity: 0;
+
+        &.slick-active{
+            opacity: 1;
+        }
+
+        img{
+            display: inline-block;
+        }
+    }
+
+
+
+    .slick-prev,
+    .slick-next{
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -14px;
+        z-index: 9999;
+
+        .icon{
+            width: 15px;
+            height: 28px;
+            fill: $grey;
+        }
+    }
+
+    .slick-prev{
+        left: -28px;
+
+        @include breakpoint(below-tablet) {
+            left: 0px;
+        }
+
+    }
+
+    .slick-next{
+        right: -28px;
+
+        @include breakpoint(below-tablet) {
+            right: 0px;
+        }
+    }
+
+    .slick-disabled{
+        opacity: 0;
+        cursor: default;
+    }
+
+    .slick-dots{
+        position: relative;
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-top: 1.75em;
+        margin-bottom: 2.5em;
+
+        > *{
+          list-style-type: none;
+          margin-bottom: 0;
+
+
+            position: relative;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 7px;
+            padding: 0;
+            cursor: pointer;
+
+
+
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: transparent;
+                box-shadow: none;
+
+
+                &:before {
+                    font-size: 10px;
+                    line-height: 10px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    content: '';
+                    text-align: center;
+                    opacity: 1;
+                    color: black;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    border: 1px solid $grey;
+                    transform: rotate(45deg);
+                    backface-visibility: hidden;
+                }
+
+
+            }
+
+            &.slick-active{
+                button{
+                    &:before{
+                        background: $grey;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+
+
+}
+
+

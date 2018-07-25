@@ -1,0 +1,385 @@
+
+.column-panel-container{
+    li:nth-child(2n+2){
+        .story-container{
+            float: right;
+        }
+
+        .anchored-img{
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
+
+.column-panel{
+    padding-top: 3em;
+    position: relative;
+    overflow-x: hidden;
+
+    @include breakpoint(below-tablet) {
+        text-align: center;
+    }
+
+
+    .inner-container{
+        font-size: 0;
+    }
+
+    h1{
+
+        font-size: 1.333333333em;
+
+        a{
+            text-decoration: none;
+        }
+
+
+
+    }
+
+    h2{
+        font-size: 2.777777778em;
+        line-height: 1.12em;
+
+        @include breakpoint(below-tablet) {
+            font-size: 2em;
+            line-height: 1.166666667em;
+            margin-bottom: .833333333em;
+        }
+
+    }
+
+
+    .story-container{
+        width: 45.6076135%;
+        font-size: 18px;
+        vertical-align: bottom;
+
+        @include breakpoint(below-tablet) {
+            width: 100%;
+        }
+
+
+
+        .inner{
+            -webkit-columns: 2 200px;
+            -moz-columns: 2 200px;
+            columns: 2 200px;
+
+            background: $light-grey;
+            position: relative;
+            padding: 2.75em 0 3em;
+
+            @include breakpoint(below-tablet) {
+                -webkit-columns: 1;
+                -moz-columns: 1;
+                columns: 1;
+                padding: 1.5em 0;
+            }
+
+
+
+            &:after{
+                content: '';
+                width: 4000px;
+                height: 100%;
+                background: $light-grey;
+                position: absolute;
+                left: -50%;
+                top: 0;
+                z-index: -1;
+            }
+
+
+            > *{
+                -webkit-column-break-inside: avoid;
+                -webkit-backface-visibility: hidden;
+                -webkit-column-break-inside: avoid;
+            }
+        }
+    }
+
+
+
+
+
+    .img-container + .story-container{
+        margin-left: 8.7847731%;
+
+        @include breakpoint(below-tablet) {
+            margin-left: 0;
+        }
+
+
+        .inner{
+            &:after{
+                left: auto;;
+                right: -50%;
+            }
+        }
+    }
+
+    .btn-container{
+        -webkit-column-span: all;
+        column-span: all;
+        margin-top: 2.5em;
+
+
+        @include breakpoint(below-tablet) {
+            margin-top: .3em;
+        }
+
+    }
+
+    .img-container{
+        font-size: 20px;
+        width: 45.6076135%;
+        vertical-align: bottom;
+        padding-bottom: 2.2em;
+
+        @include breakpoint(below-desktop) {
+            vertical-align: top;
+        }
+
+
+        @include breakpoint(below-tablet) {
+           width: 100%;
+        }
+
+    }
+
+}
+
+.hero + .column-panel{
+    @include breakpoint(below-tablet) {
+        padding-top: 1px;
+    }
+}
+
+.anchored-img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint(below-tablet) {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1.5em;
+    }
+
+    + .inner-container{
+        .story-container{
+            @include breakpoint(below-desktop) {
+                width: 100%;
+            }
+
+            h1,
+            h2{
+                @include breakpoint(below-desktop) {
+                    width: 42%;
+                }
+
+                @include breakpoint(below-tablet) {
+                    width: 100%;
+                }
+
+
+            }
+
+        }
+    }
+
+}
+
+.img-box-panel{
+    padding: 5em 0;
+
+    position: relative;
+
+    .Home &{
+        margin: 5em 0 0 0;
+    }
+
+    @include breakpoint(below-tablet) {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .inner-container{
+        @include breakpoint(below-tablet) {
+            width: 100%;
+        }
+
+    }
+
+
+    .box{
+        @extend %serif;
+        border: 1px solid $line-grey;
+        text-align: center;
+        max-width: 560px;
+
+        @include breakpoint(below-tablet) {
+            border: none;
+            max-width: 100%;
+        }
+
+
+
+        .inner{
+            background: $dark-blue;
+            color: white;
+            margin: 15px;
+            padding: 3em 12%;
+
+            @include breakpoint(below-tablet) {
+                margin: 0;
+                padding-top: 2.222222222em;
+                padding-bottom: 2.222222222em;
+            }
+
+        }
+
+        h1{
+
+            font-size: 1.333333333em;
+            margin-bottom: 1.25em;
+
+            @include breakpoint(below-tablet) {
+                margin-bottom: 1em;
+            }
+
+        }
+
+        .btn{
+            margin-top: .666666667em;
+
+            @include breakpoint(below-tablet) {
+                margin-top: 1em;
+            }
+
+        }
+    }
+
+    .img-container{
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 75%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+
+        @include breakpoint(below-tablet) {
+            display: none;
+        }
+
+
+
+    }
+
+
+    &.right{
+
+        .box{
+            float: right;
+        }
+
+        .img-container{
+
+            right: auto;
+            left: 0;
+
+        }
+
+
+    }
+}
+
+// hide stuff on mobile
+
+.Home{
+
+    .column-panel{
+        @include breakpoint(below-tablet) {
+            padding-top: 0;
+        }
+
+
+
+        &:before,
+        &:after{
+            @include breakpoint(below-tablet) {
+                content: '';
+                width: 12.5%;
+                height: 2px;
+                position: absolute;
+                bottom: .5em;
+            }
+        }
+
+        &:before{
+            left: 0;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdd1d4+0,cdd1d4+100&1+0,0+100 */
+            background: -moz-linear-gradient(left, rgba(205,209,212,1) 0%, rgba(205,209,212,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(205,209,212,1) 0%,rgba(205,209,212,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(205,209,212,1) 0%,rgba(205,209,212,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdd1d4', endColorstr='#00cdd1d4',GradientType=1 ); /* IE6-9 */
+        }
+
+        &:after{
+            right: 0;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdd1d4+0,cdd1d4+100&0+0,1+100 */
+            background: -moz-linear-gradient(left, rgba(205,209,212,0) 0%, rgba(205,209,212,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(205,209,212,0) 0%,rgba(205,209,212,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(205,209,212,0) 0%,rgba(205,209,212,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cdd1d4', endColorstr='#cdd1d4',GradientType=1 ); /* IE6-9 */
+        }
+
+        &.last{
+            &:before,
+            &:after{
+                display: none;
+            }
+        }
+
+
+
+        .anchored-img,
+        .img-container,
+        h2,
+        .inner,
+        .btn-container{
+            @include breakpoint(below-tablet) {
+                display: none;
+            }
+
+
+        }
+
+        h1{
+            @include breakpoint(below-tablet) {
+                margin-bottom: 1em;
+            }
+
+        }
+    }
+
+    .img-box-panel{
+        @include breakpoint(below-tablet) {
+            display: none;
+        }
+    }
+
+
+}

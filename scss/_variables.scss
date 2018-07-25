@@ -1,0 +1,96 @@
+/* FONTS */
+
+
+
+
+@font-face {font-family: 'BaskervilleBT-Roman';src: url('../fonts/35E07E_0_0.eot');src: url('../fonts/35E07E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/35E07E_0_0.woff2') format('woff2'),url('../fonts/35E07E_0_0.woff') format('woff'),url('../fonts/35E07E_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'BaskervilleBT-Italic';src: url('../fonts/35E07E_1_0.eot');src: url('../fonts/35E07E_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/35E07E_1_0.woff2') format('woff2'),url('../fonts/35E07E_1_0.woff') format('woff'),url('../fonts/35E07E_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'GillSansMTPro-Medium';src: url('../fonts/35E07E_2_0.eot');src: url('../fonts/35E07E_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/35E07E_2_0.woff2') format('woff2'),url('../fonts/35E07E_2_0.woff') format('woff'),url('../fonts/35E07E_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'GillSansMTPro-Light';src: url('../fonts/35E07E_3_0.eot');src: url('../fonts/35E07E_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/35E07E_3_0.woff2') format('woff2'),url('../fonts/35E07E_3_0.woff') format('woff'),url('../fonts/35E07E_3_0.ttf') format('truetype');}
+
+
+
+/* ==========================================================================
+   SCSS Variables
+   ========================================================================== */
+
+/* COLOURS */
+
+
+$dark-blue: #06090D;
+$grey: #8A8D8F;
+$ui-grey: #B7BBC0;
+$line-grey: #CDD1D4;
+$off-grey: #979797;
+
+
+
+
+
+//REMOVE THESE!
+
+$dark-grey: #3D4539;
+$medium-grey: #676E64;
+$current-grey: #a5adaa;
+$light-grey: #f7f7f7;
+
+$medium-green: #949C90;
+$dark-green: #006750;
+$light-green: #E8F1EF;
+
+$blue: #4A7FE2;
+
+
+
+
+
+
+$yellow: #FFBF00;
+
+$border: #BBC2BB;
+
+
+
+
+
+
+
+
+
+
+%base-font-rendering{
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+%serif {
+    @extend %base-font-rendering;
+
+    font-family: "BaskervilleBT-Roman", serif;
+    font-style: normal;
+}
+
+%sans {
+    @extend %base-font-rendering;
+
+    font-family: "GillSansMTPro-Medium", sans-serif;
+    font-style: normal;
+}
+
+%sans-light {
+    @extend %base-font-rendering;
+
+    font-family: "GillSansMTPro-Light", sans-serif;
+    font-style: normal;
+}
+
+
