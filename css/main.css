@@ -39,13 +39,15 @@ SASS mixins for future proof resolution media query
    SCSS Variables
    ========================================================================== */
 /* COLOURS */
-body, h1, h2, h3, h4, .site-footer .logo {
+body, .btn,
+button, .select > *, h1, h2, h3, h4, .site-footer .logo {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: grayscale;
   font-weight: normal;
   font-style: normal; }
 
-body {
+body, .btn,
+button, .select > * {
   font-family: 'Open Sans', sans-serif;
   font-style: normal; }
 
@@ -519,26 +521,22 @@ button {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   font-size: 1em;
+  font-weight: 600;
   background: #f80054;
   padding: 1em 2em .888888889em;
   line-height: 1.142857143em;
   display: inline-block;
   position: relative;
   text-align: center;
-  border: 3px solid white;
-  color: white;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); }
+  border: none;
+  border-radius: 3px;
+  color: white; }
   @media only screen and (max-width: 767px) {
     .btn,
     button {
       padding-left: 2em;
       padding-right: 2em;
       display: block; } }
-  .btn:hover,
-  button:hover {
-    box-shadow: none;
-    color: white;
-    transform: translate(0, 1px); }
   .btn:focus,
   button:focus {
     outline: none; }
@@ -666,23 +664,44 @@ body.nav-open {
   .social-links svg {
     display: block; }
 
-/*input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus{
-    -webkit-box-shadow: 0 0 0 40px white inset;
-}*/
-input {
+form {
+  text-align: left;
+  width: 60%;
+  margin: 0 auto; }
+  form .row {
+    display: flex; }
+  form .col {
+    width: 50%;
+    display: flex;
+    flex-flow: column; }
+    form .col:nth-child(2) {
+      margin-left: 30px; }
+  form button {
+    width: 100%; }
+
+label {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+input,
+textarea {
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-size: 1.333333333em;
+  font-size: 1em;
   border: none;
-  padding: .666666667em 0 .625em;
-  background: transparent; }
-  input:focus {
-    outline: none;
-    border-color: black; }
+  padding: .666666667em 1em .625em;
+  background: transparent;
+  border: 1px solid #eee;
+  width: 100%; }
+  input:focus,
+  textarea:focus {
+    outline: none; }
+
+textarea {
+  height: 100%; }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -707,8 +726,54 @@ input {
   font-size: .777777778em;
   text-align: left; }
 
-.umbraco-forms-submitmessage {
-  font-size: 2em; }
+/* selects */
+.select {
+  position: relative;
+  vertical-align: middle;
+  padding: 0;
+  overflow: hidden;
+  text-shadow: none;
+  background: transparent;
+  border: 1px solid #eee; }
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 1.25em;
+    pointer-events: none;
+    padding-top: 17px;
+    padding-left: 1.25em; }
+  .select > * {
+    color: #787878;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1.25em;
+    width: 108%;
+    border: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 160%\9; }
+    .select > *:focus {
+      outline: none; }
+    .select > *::-ms-expand {
+      display: none; }
+
+.select:before {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  height: 100%;
+  color: white; }
+
+.icon--down:before, .select:before {
+  content: url(../img/icon-arrow-down.svg); }
 
 /* ==========================================================================
    Helper classes

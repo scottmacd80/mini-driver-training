@@ -106,18 +106,19 @@ a{
 .btn,
 button{
     @include smooth;
-
+    @extend %sans;
     text-decoration: none;
     font-size: 1em;
+    font-weight: 600;
     background: $magenta;
     padding: 1em 2em .888888889em;
     line-height: 1.142857143em;
     display: inline-block;
     position: relative;
     text-align: center;
-    border: 3px solid white;
+    border: none;
+    border-radius: 3px;
     color: white;
-    box-shadow: 0px 0px 20px rgba(0,0,0,.3);
 
 
     @include breakpoint(below-tablet) {
@@ -129,9 +130,7 @@ button{
 
 
   &:hover{
-    box-shadow: none;
-    color: white;
-    transform: translate(0,1px);
+
   }
 
 
