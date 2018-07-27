@@ -6,18 +6,16 @@ input:-webkit-autofill:focus{
 }*/
 
 input{
-    @extend %serif;
     @include smooth;
     //-webkit-box-shadow: 0 0 0 40px white inset;
     font-size: 1.333333333em;
     border: none;
-    border-bottom: 1px solid $line-grey;
     padding: .666666667em 0 .625em;
     background: transparent;
 
     &:focus{
         outline: none;
-        border-color: $dark-blue;
+        border-color: black;
     }
 }
 
