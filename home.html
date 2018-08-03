@@ -24,28 +24,11 @@
     </head>
     <body class="Home initial-load">
 
-        <div id="devGrid">
-            <div class="inner">
-                <div class="floated"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-                <div class="floated m-hidden"></div>
-            </div>
-        </div>
-
         <header class="site-header" role="banner">
 
             <div class="inner layout">
                 <a href="/" class="logo">
-                    Minidrivertraining.com
+                    Mini<span class="magenta">drivertraining</span>.com
                 </a>
 
                 <a class="hamburger hamburger--spin">
@@ -54,41 +37,118 @@
                     </span>
                 </a>
 
-                <nav role="navigation" aria-label="Global Navigation" class="main-nav">
-                    <ul class="layout">
+                <nav role="navigation" aria-label="Global Navigation" class="main-nav floated-list layouut">
+                    <ul class="layout inline-list">
                         <li><a href="#todo">Learn to drive</a></li>
                         <li><a href="#todo">Testimonials</a></li>
                         <li><a href="#todo">Instructor training</a></li>
                         <li><a href="#todo">Book now</a></li>
                     </ul>
+
+                    <span class="tel magenta">TEL: 07785346545</span>
                 </nav>
             </div>
         </header>
 
         <main class="content" role="main">
 
-    <section>
-        <div class="inner module">
-            <h1>I am a website</h1>
+        <section class="hero" style="background-image: url(img/img2.jpg);">
+            <div class="inner module">
+                <h1>Learn to drive<br> from just £25 per hour</h1>
+            </div>
+        </section>
 
-            <p>This is content</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </section>
+        <section>
+            <div class="inner module centered-copy intro">
+                <h2>Learn to drive with MINI<span class="magenta">DRIVERTRAINING</span>.COM</h2>
+                <p>Glasgow&rsquo;s premier driving intructor school</p>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
 
     <section class="centered-copy">
+        <ul class="three-col-boxes layout">
+            <li style="background-image: url(img/img1.jpg);">
+                <a href="#" class="inner module">
+                    <h2>Learn to drive</h2>
+    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </a>
+            </li>
+    
+            <li style="background-image: url(img/img1.jpg);">
+                <a href="#" class="inner module">
+                    <h2>Testimonials</h2>
+    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </a>
+            </li>
+    
+            <li style="background-image: url(img/img1.jpg);">
+                <a href="#" class="inner module">
+                    <h2>Instructor training</h2>
+    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <section class="centered-copy map">
+        <div class="inner">
+            <h2>Areas we cover</h2>
+    
+            <ul class="layout inline-list m-block-list">
+                <li>Baillieston</li>
+                <li>Garrowhill</li>
+                <li>Swinton</li>
+                <li>Carntyne</li>
+                <li>Craigend</li>
+                <li>Stepps</li>
+                <li>Tollcross</li>
+                <li>Mount Vernon</li>
+                <li>Uddingston</li>
+                <li>Broomhouse</li>
+                <li>Coatbridge</li>
+                <li>Airdrie</li>
+                <li>Parkhead</li>
+                <li>Dennistoun</li>
+                <li>Gartcosh</li>
+                <li>Greenfield</li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <section class="centered-copy booking-form">
         <h2>Book now</h2>
     
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.</p>
+        tempor incididunt ut labore et dolore magna aliqua.</p>
     
         <form>
             <fieldset>
@@ -114,10 +174,10 @@
                                 <label for="interest">Interested in:</label>
                                 <div class="select">
                                     <select id="interest">
-                                        <option>Option 1</option>
-                                        <option>Option 1</option>
-                                        <option>Option 1</option>
-                                        <option>Option 1</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
+                                        <option>Option</option>
                                     </select>
                                 </div>
                             </li>

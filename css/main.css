@@ -40,7 +40,7 @@ SASS mixins for future proof resolution media query
    ========================================================================== */
 /* COLOURS */
 body, .btn,
-button, .select > *, h1, h2, h3, h4, .site-footer .logo {
+button, .select > *, h1, h2, h3, h4, .site-header .logo, .site-header .main-nav, .site-footer .logo {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: grayscale;
   font-weight: normal;
@@ -51,7 +51,7 @@ button, .select > * {
   font-family: 'Open Sans', sans-serif;
   font-style: normal; }
 
-h1, h2, h3, h4, .site-footer .logo {
+h1, h2, h3, h4, .site-header .logo, .site-header .main-nav, .site-footer .logo {
   font-family: "Nissan", sans-serif;
   font-style: normal; }
 
@@ -465,13 +465,7 @@ body {
       width: 100%; } }
 
 .content {
-  padding-top: 175px; }
-  @media only screen and (max-height: 767px) and (min-width: 641px) {
-    .content {
-      padding-top: 77px; } }
-  @media only screen and (max-width: 1024px) {
-    .content {
-      padding-top: 77px; } }
+  padding-top: 65px; }
 
 h1, h2, h3, h4 {
   font-weight: normal;
@@ -487,8 +481,7 @@ h1 {
 
 h2 {
   font-size: 2.666666667em;
-  line-height: 1.125em;
-  margin-bottom: 1.111111111em; }
+  line-height: 1.125em; }
   @media only screen and (max-width: 767px) {
     h2 {
       font-size: 2em;
@@ -544,6 +537,9 @@ button {
   button .icon {
     fill: black; }
 
+.magenta {
+  color: #f80054; }
+
 .site-header {
   background: white;
   position: fixed;
@@ -555,6 +551,18 @@ button {
     left: 0;
     right: 0;
     margin: 0 auto; }
+  .site-header .logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.714285714em;
+    float: left; }
+  .site-header .main-nav {
+    float: right; }
+    .site-header .main-nav li {
+      margin-right: 30px; }
+
+.hamburger {
+  display: none; }
 
 html.nav-open {
   overflow: hidden; }
@@ -602,7 +610,7 @@ body.nav-open {
   padding: 4.5em 0 4.9em; }
   @media only screen and (max-width: 940px) {
     .site-footer {
-      padding: 1.5em 0; } }
+      padding: 2em 0; } }
   .site-footer .logo {
     color: white;
     text-transform: uppercase;
@@ -664,18 +672,180 @@ body.nav-open {
   .social-links svg {
     display: block; }
 
-form {
-  text-align: left;
+.hero {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 60vh; }
+  @media only screen and (max-width: 640px) {
+    .hero {
+      height: 300px; } }
+  .hero .inner {
+    color: white;
+    background: rgba(0, 0, 0, 0.65);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    @media only screen and (max-width: 640px) {
+      .hero .inner {
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 6.25%;
+        padding-right: 6.25%;
+        text-align: center; } }
+    .hero .inner h1 {
+      font-size: 2.571428571em;
+      margin-left: 15%; }
+      @media only screen and (max-width: 640px) {
+        .hero .inner h1 {
+          margin-left: 0;
+          font-size: 1.142857143em;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          width: 100%; }
+          .hero .inner h1 br {
+            display: none; } }
+
+.intro {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 640px) {
+    .intro {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .intro.inner {
+    width: 87.5%;
+    max-width: 860px;
+    margin: 0 auto; }
+  .intro h2 {
+    font-size: 1.714285714em;
+    margin-bottom: 0; }
+    .intro h2 + p {
+      color: #f80054;
+      font-size: 1.142857143em; }
+
+.three-col-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 640px) {
+    .three-col-boxes {
+      display: block;
+      width: 87.5%;
+      margin-left: auto;
+      margin-right: auto; } }
+  .three-col-boxes li {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 33.333333333%;
+    height: 400px; }
+    @media only screen and (max-width: 640px) {
+      .three-col-boxes li {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3em; } }
+    .three-col-boxes li .inner {
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      width: 100%;
+      padding: 40px; }
+      @media only screen and (max-width: 640px) {
+        .three-col-boxes li .inner {
+          display: inline-block;
+          margin-top: 40px;
+          margin-bottom: 40px; } }
+  .three-col-boxes a {
+    text-decoration: none; }
+    .three-col-boxes a:hover {
+      background: rgba(248, 0, 84, 0.7); }
+  .three-col-boxes h2 {
+    font-size: 1.714285714em;
+    text-transform: uppercase; }
+
+.map {
+  position: relative;
+  color: white;
+  background: url(../img/map.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 65px; }
+  @media only screen and (max-width: 640px) {
+    .map {
+      padding-top: 40px;
+      padding-bottom: 0; } }
+  .map:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(248, 0, 84, 0.7);
+    z-index: 9; }
+  .map .inner {
+    position: relative;
+    z-index: 99;
+    width: 87.5%;
+    max-width: 600px;
+    margin: 0 auto; }
+  .map li {
+    margin-bottom: 40px; }
+    @media only screen and (max-width: 640px) {
+      .map li {
+        font-size: 1.285714286em;
+        margin-bottom: 30px; } }
+    .map li:not(:first-child):before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: white;
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 10px;
+      border-radius: 50%; }
+      @media only screen and (max-width: 640px) {
+        .map li:not(:first-child):before {
+          display: none; } }
+
+.booking-form {
   width: 60%;
-  margin: 0 auto; }
+  margin: 100px auto; }
+  @media only screen and (max-width: 640px) {
+    .booking-form {
+      width: 87.5%;
+      margin: 30px auto; } }
+  .booking-form p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em; }
+
+form {
+  text-align: left; }
   form .row {
     display: flex; }
+    @media only screen and (max-width: 640px) {
+      form .row {
+        display: block; } }
   form .col {
     width: 50%;
     display: flex;
     flex-flow: column; }
+    @media only screen and (max-width: 640px) {
+      form .col {
+        width: 100%; } }
     form .col:nth-child(2) {
       margin-left: 30px; }
+      @media only screen and (max-width: 640px) {
+        form .col:nth-child(2) {
+          margin-left: 0; } }
   form button {
     width: 100%; }
 
@@ -695,7 +865,8 @@ textarea {
   padding: .666666667em 1em .625em;
   background: transparent;
   border: 1px solid #eee;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1em; }
   input:focus,
   textarea:focus {
     outline: none; }
@@ -734,7 +905,8 @@ textarea {
   overflow: hidden;
   text-shadow: none;
   background: transparent;
-  border: 1px solid #eee; }
+  border: 1px solid #eee;
+  margin-bottom: 1em; }
   .select:before {
     position: absolute;
     top: 0;

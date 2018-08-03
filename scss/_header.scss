@@ -13,8 +13,35 @@
     right: 0;
     margin: 0 auto;
   }
+
+  .logo{
+    @extend %heading;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.714285714em;
+    float: left;
+  }
+
+  .main-nav{
+    @extend %heading;
+    float: right;
+
+    li{
+        margin-right: 30px;
+    }
+  }
+
+  .tel{
+
+  }
+
+
 }
 
+
+.hamburger{
+    display: none;
+}
 
 
 

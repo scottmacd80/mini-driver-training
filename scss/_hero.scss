@@ -1,0 +1,51 @@
+.hero{
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 60vh;
+
+  @include breakpoint(mobile) {
+      height: 300px;
+  }
+
+
+  .inner{
+    color: white;
+    background: rgba(0,0,0,.65);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 6.25%;
+        padding-right: 6.25%;
+        text-align: center;
+    }
+
+
+    h1{
+      font-size: 2.571428571em;
+      margin-left: 15%;
+
+      @include breakpoint(mobile) {
+          margin-left: 0;
+          font-size: 1.142857143em;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          width: 100%;
+
+
+          br{
+            display: none;
+          }
+      }
+
+    }
+  }
+
+}

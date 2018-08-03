@@ -1,13 +1,37 @@
 
+.booking-form{
+  width: 60%;
+  margin: 100px auto;
 
+  @include breakpoint(mobile) {
+      width: 87.5%;
+      margin: 30px auto;
+  }
+
+
+
+  p{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+  }
+}
 
 form{
   text-align: left;
-  width: 60%;
-  margin: 0 auto;
+
+
+
+
 
   .row{
     display: flex;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+
 
   }
 
@@ -16,8 +40,21 @@ form{
     display: flex;
     flex-flow: column;
 
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+
+
+
+
+
     &:nth-child(2){
       margin-left: 30px;
+
+      @include breakpoint(mobile) {
+          margin-left: 0;
+      }
+
     }
   }
 
@@ -43,6 +80,7 @@ textarea{
     background: transparent;
     border: 1px solid $light-grey;
     width: 100%;
+    margin-bottom: 1em;
 
     &:focus{
         outline: none;
@@ -88,6 +126,7 @@ textarea{
   text-shadow: none;
   background: transparent;
   border: 1px solid $light-grey;
+  margin-bottom: 1em;
 
 
 
