@@ -171,7 +171,7 @@ main ul ul {
   .m-no-float {
     float: none !important; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .bd-no-float {
     float: none !important; } }
 
@@ -382,7 +382,7 @@ a {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 0px 0px;
+  padding: 20px 20px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -411,7 +411,7 @@ a {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 20px;
     height: 2px;
-    background-color: black;
+    background-color: white;
     border-radius: 0;
     position: absolute;
     transition-property: transform;
@@ -554,15 +554,57 @@ button {
   .site-header .logo {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.714285714em;
+    font-size: 1.375em;
     float: left; }
+    @media only screen and (max-width: 640px) {
+      .site-header .logo {
+        float: none;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        font-size: 1.75em;
+        margin-bottom: .714285714em; } }
   .site-header .main-nav {
     float: right; }
+    @media only screen and (max-width: 640px) {
+      .site-header .main-nav {
+        float: none;
+        margin-top: 10px;
+        padding: 30px; } }
     .site-header .main-nav li {
       margin-right: 30px; }
+      @media only screen and (max-width: 640px) {
+        .site-header .main-nav li {
+          margin-bottom: 1em; } }
+  @media only screen and (max-width: 640px) {
+    .site-header .tel {
+      display: none; } }
 
-.hamburger {
-  display: none; }
+.hamburger-container {
+  display: none;
+  background: #7f0004;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  position: relative;
+  border-radius: 5px; }
+  @media only screen and (max-width: 640px) {
+    .hamburger-container {
+      display: block; } }
+  .hamburger-container .hamburger {
+    background: #a30411;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px; }
+  .hamburger-container .phone {
+    background: #a30411;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    padding: 15px; }
 
 html.nav-open {
   overflow: hidden; }
@@ -571,37 +613,26 @@ body.nav-open {
   overflow: visible;
   height: 100%; }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-nav {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    /* These 2 below are all the magic: */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; }
-    .nav-open .main-nav {
-      display: block !important; } }
-    @media only screen and (max-width: 1024px) and (min-height: 569px) and (max-width: 1023px) {
-      .nav-open .main-nav {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        padding-top: 0; } }
+    background: #a30411; } }
+
+@media only screen and (max-width: 640px) {
+  .main-nav a {
+    color: white; } }
+
+.nav-open .main-nav {
+  display: block !important; }
 
 .mobile-toggle {
   display: none; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .mobile-toggle {
       display: inline-block; } }
 
 .hamburger-box {
-  display: block;
-  margin-top: -15px; }
+  display: block; }
 
 .site-footer {
   background: #404040;
@@ -1025,7 +1056,7 @@ textarea {
     margin-right: 0;
     width: 100% !important; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .bd-block-list > * {
     float: none !important;
     display: block;

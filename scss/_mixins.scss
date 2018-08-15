@@ -32,7 +32,7 @@
 		@media only screen and (max-width: 1199px) { @content }
 	}
 	@else if $media == below-desktop {
-		@media only screen and (max-width: 1024px) { @content }
+		@media only screen and (max-width: 1023px) { @content }
 	}
 	@else if $media == below-tablet {
 		@media only screen and (max-width: 767px) { @content }

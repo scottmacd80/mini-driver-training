@@ -13,32 +13,22 @@
     @include breakpoint(below-desktop) {
         display: none;
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        /* These 2 below are all the magic: */
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-
-        .nav-open &{
-            display: block!important;
-
-            @include breakpoint(above-iphone5) {
-                display: flex!important;
-                align-items: center;
-                justify-content: center;
-                padding-top: 0;
-            }
-        }
+        background: $light-red;
 
     }
 
 
 
+    a{
+        @include breakpoint(mobile) {
+            color: white;
+        }
+
+    }
+
+    .nav-open &{
+        display: block!important;
+    }
 
 }
 
@@ -54,6 +44,6 @@
 
 .hamburger-box {
     display: block;
-    margin-top: -15px;
+
 }
 
