@@ -21,7 +21,7 @@
     font-size: 1.375em;
     float: left;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(below-desktop) {
         float: none;
         text-align: center;
         width: 100%;
@@ -35,7 +35,7 @@
   .main-nav{
     @extend %heading;
     float: right;
-    @include breakpoint(mobile) {
+    @include breakpoint(below-desktop) {
         float: none;
         margin-top: 10px;
         padding: 30px;
@@ -45,7 +45,7 @@
     li{
         margin-right: 30px;
 
-        @include breakpoint(mobile) {
+        @include breakpoint(below-desktop) {
             margin-bottom: 1em;
         }
 
@@ -53,7 +53,7 @@
   }
 
   .tel{
-    @include breakpoint(mobile) {
+    @include breakpoint(below-desktop) {
         display: none;
     }
 
@@ -73,7 +73,7 @@
     position: relative;
     border-radius: 5px;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(below-desktop) {
         display: block;
     }
 

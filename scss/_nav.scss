@@ -20,7 +20,7 @@
 
 
     a{
-        @include breakpoint(mobile) {
+        @include breakpoint(below-desktop) {
             color: white;
         }
 
@@ -33,14 +33,6 @@
 }
 
 
-.mobile-toggle{
-    display: none;
-
-    @include breakpoint(below-desktop) {
-        display: inline-block;
-    }
-
-}
 
 .hamburger-box {
     display: block;

@@ -62,6 +62,17 @@ $(function(){
     });
 
 
+    $('.book-now').click(function(e) {
+
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $("#booking-form").offset().top - 136
+        }, 1000);
+    });
+
+
+
 }); // END DOCUMENT READY
 
 

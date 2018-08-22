@@ -1,0 +1,27 @@
+.faq{
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  ul{
+    width: 87.5%;
+    max-width: 860px;
+    margin: 0 auto;
+
+    li{
+      margin-bottom: 30px;
+    }
+  }
+
+  h2{
+    text-align: center;
+    color: $magenta;
+    font-size: 1.714285714em;
+  }
+
+  h3{
+    @extend %sans;
+    font-size: 1.285714286em;
+  }
+
+
+}

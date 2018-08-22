@@ -1,0 +1,30 @@
+.benefits-pricing{
+
+  .logo{
+    color: black;
+    display: block;
+
+    span{
+      color: $magenta;
+    }
+  }
+
+  table{
+    margin-bottom: 20px;
+  }
+
+  td{
+    &:nth-child(2){
+      text-align: right;
+    }
+
+    span{
+      font-size: .555555556em;
+      display: block;
+    }
+
+  }
+
+
+
+}
